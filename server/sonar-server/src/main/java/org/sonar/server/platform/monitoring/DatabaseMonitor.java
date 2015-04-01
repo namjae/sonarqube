@@ -78,6 +78,8 @@ public class DatabaseMonitor extends BaseMonitorMBean implements DatabaseMonitor
     return dbVersion.getStatus().name();
   }
 
+
+
   @Override
   public int getPoolActiveConnections() {
     return commonsDbcp().getNumActive();

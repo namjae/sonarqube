@@ -29,7 +29,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ServerWsTest {
 
-  WsTester tester = new WsTester(new ServerWs());
+  WsTester tester = new WsTester(new ServerWs(serverWsActions));
 
   @Test
   public void define_controller() throws Exception {
