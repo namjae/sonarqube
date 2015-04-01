@@ -20,7 +20,7 @@ import java.io.IOException;
  * 3. Get ruby objects for use in java world
  * 4. Proxy ruby objects for normal use as java objects (interfaces/class)
  */
-public class CallRuby {
+public class T {
 
   public static void main(String[] args) throws Exception {
 
@@ -52,7 +52,7 @@ public class CallRuby {
       } else {
 
         // --- Initialise ruby
-        final Ruby runtime = Ruby.getDefaultInstance();
+        final Ruby runtime = Ruby.newInstance();
 
         // Need the blank object so can get a nice runtime for the Java.staticMethods calls
         runtime.eval(runtime.parse("require \"java\"\nclass BlankForJva\nend\n", "BlankForJva.rb", runtime.getCurrentContext().getCurrentScope(), 0));
